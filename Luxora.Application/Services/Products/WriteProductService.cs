@@ -22,4 +22,9 @@ public class WriteProductService : IWriteProductService
     {
         await _productRepository.UpdateProduct(productId, product);
     }
+    
+    public async Task DeleteProduct(long productId)
+    {
+        await _productRepository.DeleteProduct(productId);
+    }
 }

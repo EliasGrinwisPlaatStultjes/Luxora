@@ -51,4 +51,17 @@ public class ProductRepository : IProductRepository
 
         await _context.SaveChangesAsync();
     }
+
+    public async Task DeleteProduct(long productId)
+    {
+        var product = await _context.Products.FindAsync(productId);
+        
+        if (product is null)
+        {
+            throw new KeyNotFoundException($"Product with ID {productId} not found");
+        }
+
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+    }
 }
