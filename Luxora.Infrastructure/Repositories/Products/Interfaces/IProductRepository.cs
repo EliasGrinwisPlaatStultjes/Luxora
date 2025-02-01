@@ -11,4 +11,6 @@ public interface IProductRepository
     Task CreateProduct(Product product);
     
     Task UpdateProduct(long productId, Product product);
+    
+    Task DeleteProduct(long productId);
 }

@@ -46,6 +46,6 @@ public class ProductsController : ControllerBase
     [HttpDelete("{productId:long}")]
     public async Task DeleteProduct(long productId)
     {
-        // TODO: Implement delete product
+        await _writeProductService.DeleteProduct(productId);
     }
 }
