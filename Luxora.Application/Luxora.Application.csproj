@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Dto\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Luxora.Domain\Luxora.Domain.csproj" />
+      <ProjectReference Include="..\Luxora.Infrastructure\Luxora.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
