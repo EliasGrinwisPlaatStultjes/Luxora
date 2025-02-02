@@ -22,16 +22,19 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: backend
 
       - name: Build Solution
         run: dotnet build --no-restore --configuration Release
+        working-directory: backend
 
       - name: Run Unit Tests
         run: dotnet test --no-build --configuration Release --verbosity normal --logger trx --results-directory TestResults
+        working-directory: backend
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
-          path: TestResults/*.trx
+          path: backend/TestResults/*.trx
