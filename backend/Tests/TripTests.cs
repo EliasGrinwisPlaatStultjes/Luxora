@@ -24,7 +24,7 @@ public class TripTests
             Name = "Test Trip",
             Description = "Some description",
             StartDate = DateTime.Today,
-            EndDate = DateTime.Now,
+            EndDate = DateTime.Today.AddDays(2),
             Status = TripStatus.Planned
         };
         
