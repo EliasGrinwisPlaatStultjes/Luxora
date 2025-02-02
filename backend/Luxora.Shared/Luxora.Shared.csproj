@@ -7,9 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Dto\" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\Luxora.Domain\Luxora.Domain.csproj" />
-      <ProjectReference Include="..\Luxora.Infrastructure\Luxora.Infrastructure.csproj" />
-      <ProjectReference Include="..\Luxora.Shared\Luxora.Shared.csproj" />
     </ItemGroup>
 
 </Project>

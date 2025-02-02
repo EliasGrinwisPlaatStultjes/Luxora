@@ -1,23 +1,18 @@
-﻿using Luxora.Domain.Entities.EFService;
-using Luxora.Domain.Models;
+﻿using Luxora.Domain.Entities.EFTrip;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Luxora.Infrastructure.Context;
 
-public class LuxoraDbContext : DbContext
+public class LuxoraDbContext : IdentityDbContext<IdentityUser>
 {
     public LuxoraDbContext(DbContextOptions<LuxoraDbContext> options) : base(options) { }
     
-    public DbSet<Product> Products { get; set; }
-    
-    public DbSet<Service> Services { get; set; }
-    
-    public DbSet<ServiceCategory> ServiceCategories { get; set; }
+    public DbSet<Trip> Trips { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Product>().ToTable("Products");
-        modelBuilder.Entity<Service>().ToTable("Services");
-        modelBuilder.Entity<ServiceCategory>().ToTable("ServiceCategories");
+        base.OnModelCreating(modelBuilder);
     }
 }
