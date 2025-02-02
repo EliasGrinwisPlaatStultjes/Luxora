@@ -2,7 +2,7 @@ name: Deploy frontend to Vercel
 
 on:
   push:
-    branches: ["merge/pull-request"]
+    branches: ["development"]
 
 jobs:
   build-and-test:
