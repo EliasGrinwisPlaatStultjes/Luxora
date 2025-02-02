@@ -49,4 +49,6 @@ public class TripsController : ControllerBase
     {
         await _writeTripService.DeleteTrip(tripId);
     }
+    
+    // TODO: Add more endpoints
 }
