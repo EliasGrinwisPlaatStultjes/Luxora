@@ -1,11 +1,11 @@
-name: Build and deploy frontend to Vercel
+name: DEV Automerge Client
 
 on:
-  push:
+  pull_request:
     branches: ["development"]
 
 jobs:
-  frontend-build-and-deploy-to-vercel:
+  dev-automerge-client:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,10 +23,4 @@ jobs:
 
       - name: Build Application
         run: npm run build
-        working-directory: frontend
-
-      - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: npx vercel --prod --yes --token $VERCEL_TOKEN
         working-directory: frontend
