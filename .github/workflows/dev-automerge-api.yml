@@ -1,14 +1,11 @@
-# This workflow will build and test a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET build and test API
+name: DEV Automerge API
 
 on:
   pull_request:
-    branches: ["merge/pull-request"]
+    branches: ["development"]
 
 jobs:
-  backend-build-and-test-api:
+  dev-automerge-api:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,10 +28,3 @@ jobs:
       - name: Run Unit Tests
         run: dotnet test --no-build --configuration Release --verbosity normal --logger trx --results-directory TestResults
         working-directory: backend
-
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: backend/TestResults/*.trx
