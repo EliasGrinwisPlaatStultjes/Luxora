@@ -20,7 +20,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Save and see your changes instantly. some extra text that i only want to see in dev</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
