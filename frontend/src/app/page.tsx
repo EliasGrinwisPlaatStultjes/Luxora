@@ -57,6 +57,8 @@ export default function Home() {
                         src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=1974"
                         alt="Tropical Paradise"
                         className="object-cover w-full h-full"
+                        width={1974}
+                        height={2632}
                     />
                   </AspectRatio>
                   <AspectRatio ratio={1} className="rounded-2xl overflow-hidden">
@@ -64,6 +66,8 @@ export default function Home() {
                         src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1975"
                         alt="Mountain Adventure"
                         className="object-cover w-full h-full"
+                        width={1975}
+                        height={1975}
                     />
                   </AspectRatio>
                 </div>
@@ -73,6 +77,8 @@ export default function Home() {
                         src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049"
                         alt="Luxury Hotel"
                         className="object-cover w-full h-full"
+                        width={2049}
+                        height={2049}
                     />
                   </AspectRatio>
                   <AspectRatio ratio={3/4} className="rounded-2xl overflow-hidden">
@@ -80,6 +86,8 @@ export default function Home() {
                         src="https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=1949"
                         alt="Beach Sunset"
                         className="object-cover w-full h-full"
+                        width={1949}
+                        height={1462}
                     />
                   </AspectRatio>
                 </div>
@@ -112,6 +120,8 @@ export default function Home() {
                           src={deal.image}
                           alt={deal.destination}
                           className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                          width={2070}
+                            height={1163}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                       <div className="absolute inset-0 p-6 flex flex-col justify-between">
@@ -200,6 +210,8 @@ export default function Home() {
                           src={destination.image}
                           alt={destination.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          width={2070}
+                          height={1163}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -247,6 +259,8 @@ export default function Home() {
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-12 h-12 rounded-full object-cover"
+                            width={200}
+                            height={200}
                       />
                       <div>
                         <h4 className="font-semibold">{testimonial.name}</h4>
