@@ -4,6 +4,7 @@ import { Plane, Map, Users, Star, ArrowRight, TreePalm as PalmTree } from "lucid
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
                   <span className="text-primary block mt-2">Next Adventure</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Experience extraordinary destinations that will take your breath away. Let us guide you to the world's most remarkable places.
+                  Experience extraordinary destinations that will take your breath away. Let us guide you to the world&apos;s most remarkable places.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
@@ -52,14 +53,14 @@ export default function Home() {
               <div className="relative grid grid-cols-2 gap-4 lg:gap-6">
                 <div className="space-y-4 lg:space-y-6">
                   <AspectRatio ratio={3/4} className="rounded-2xl overflow-hidden">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=1974"
                         alt="Tropical Paradise"
                         className="object-cover w-full h-full"
                     />
                   </AspectRatio>
                   <AspectRatio ratio={1} className="rounded-2xl overflow-hidden">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1975"
                         alt="Mountain Adventure"
                         className="object-cover w-full h-full"
@@ -68,14 +69,14 @@ export default function Home() {
                 </div>
                 <div className="space-y-4 lg:space-y-6 pt-8">
                   <AspectRatio ratio={1} className="rounded-2xl overflow-hidden">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049"
                         alt="Luxury Hotel"
                         className="object-cover w-full h-full"
                     />
                   </AspectRatio>
                   <AspectRatio ratio={3/4} className="rounded-2xl overflow-hidden">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=1949"
                         alt="Beach Sunset"
                         className="object-cover w-full h-full"
@@ -107,7 +108,7 @@ export default function Home() {
               ].map((deal, index) => (
                   <Card key={index} className="group relative overflow-hidden">
                     <AspectRatio ratio={16/9}>
-                      <img
+                      <Image
                           src={deal.image}
                           alt={deal.destination}
                           className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
@@ -195,7 +196,7 @@ export default function Home() {
               ].map((destination, index) => (
                   <Card key={index} className="overflow-hidden group border-0 shadow-lg">
                     <div className="relative h-80">
-                      <img
+                      <Image
                           src={destination.image}
                           alt={destination.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -242,7 +243,7 @@ export default function Home() {
               ].map((testimonial, index) => (
                   <Card key={index} className="p-8 bg-white/50 backdrop-blur-sm">
                     <div className="flex items-start gap-4 mb-6">
-                      <img
+                      <Image
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-12 h-12 rounded-full object-cover"
