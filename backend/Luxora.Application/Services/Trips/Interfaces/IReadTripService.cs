@@ -6,5 +6,7 @@ public interface IReadTripService
 {
     Task<List<Trip>> GetAllTrips();
     
+    Task<List<Trip>> GetAllTripsByUserId(Guid userId);
+    
     Task<Trip> GetTripById(long tripId);
 }

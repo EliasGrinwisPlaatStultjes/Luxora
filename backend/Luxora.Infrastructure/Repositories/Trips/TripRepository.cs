@@ -20,6 +20,12 @@ public class TripRepository : ITripRepository
         return await _context.Trips.ToListAsync();
     }
 
+    public async Task<List<Trip>> GetAllTripsByUserId(Guid userId)
+    {
+        var trips = await _context.Trips.Where(trip => trip.UserId == userId).ToListAsync();
+        return trips;
+    }
+
     public async Task<Trip> GetTripById(long tripId)
     {
         var trip = await _context.Trips.FindAsync(tripId);
@@ -41,6 +47,7 @@ public class TripRepository : ITripRepository
             StartDate = tripRequest.StartDate,
             EndDate = tripRequest.EndDate,
             Status = tripRequest.Status,
+            UserId = tripRequest.UserId
         };
         
         _context.Trips.Add(trip);

@@ -19,6 +19,12 @@ public class ReadTripService : IReadTripService
         return trips;
     }
 
+    public Task<List<Trip>> GetAllTripsByUserId(Guid userId)
+    {
+        var trips = _tripRepository.GetAllTripsByUserId(userId);
+        return trips;
+    }
+
     public Task<Trip> GetTripById(long tripId)
     {
         var trip = _tripRepository.GetTripById(tripId);

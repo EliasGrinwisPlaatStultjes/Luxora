@@ -14,4 +14,6 @@ public class TripRequestDto
     public required DateTime EndDate { get; set; }
     
     public required TripStatus Status { get; set; }
+    
+    public required Guid UserId { get; set; }
 }

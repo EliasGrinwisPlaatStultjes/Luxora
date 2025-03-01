@@ -25,7 +25,8 @@ public class TripTests
             Description = "Some description",
             StartDate = DateTime.Today,
             EndDate = DateTime.Today.AddDays(2),
-            Status = TripStatus.Planned
+            Status = TripStatus.Planned,
+            UserId = Guid.NewGuid()
         };
         
         _writeTripServiceMock

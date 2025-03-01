@@ -1,10 +1,12 @@
 ﻿using Luxora.Application.Services.Trips.Interfaces;
 using Luxora.Domain.Entities.EFTrip;
 using Luxora.Shared.Dto.Trips;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Luxora.ApiService.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class TripsController : ControllerBase
@@ -22,6 +24,13 @@ public class TripsController : ControllerBase
     public async Task<List<Trip>> GetAllTrips()
     {
         var trips = await _readTripService.GetAllTrips();
+        return trips;
+    }
+    
+    [HttpGet("{userId:guid}")]
+    public async Task<List<Trip>> GetAllTripsByUserId(Guid userId)
+    {
+        var trips = await _readTripService.GetAllTripsByUserId(userId);
         return trips;
     }
 
